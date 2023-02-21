@@ -6,15 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Library</title>
     <link rel="stylesheet" href="styles.css"/>
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header>
         <h1>Library</h1>
-        <button id="add-book">Add new book</button>
     </header>
+    <div id="sidebar">
+        <h2>Add new book to library</h2>
+        <form id="book-form">
+            <div class="input">
+                <label for="title">Book title</label>
+                <input type="text" name="title" id="title">
+            </div>
+            <div class="input">
+                <label for="author">Author</label>
+                <input type="text" name="author" id="author">
+            </div>
+            <div class="input">
+                <label for="pages">Number of pages</label>
+                <input type="number" name="pages" id="pages">
+            </div>
+            <div class="input">
+                <label for="read">Have you read it?</label>
+                <select name="read" id="read">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+                </select>
+            </div>
+            <button type="submit" id="add-book">Add new book</button>
+        </form>
+    </div>
     <div id="content">
-        <ul id="book-list"></ul>
+        <h2>Your book list:</h2>
+        <table id="book-list">
+            <tr id="list-header">
+                <th>Title</th>
+                <th>Author</th>
+                <th>Pages</th>
+                <th>Read</th>
+                <th id="list-actions" colspan="2">Actions</th>
+            </tr>
+        </table>
     </div>
 </body>
 </html>
