@@ -1,14 +1,14 @@
 // Array to store books
 let myLibrary = [];
 
-// Book constructor
-function Book(author, title, pages, read, index) {
-
-    this.author = author;
-    this.title = title;
-    this.pages = pages;
-    this.read = read;
-    this.index = index;
+class Book {
+    constructor(author, title, pages, read, index) {
+        this.author = author;
+        this.title = title;
+        this.pages = pages;
+        this.read = read;
+        this.index = index;
+    };
 };
 
 function AddBook(event) {
